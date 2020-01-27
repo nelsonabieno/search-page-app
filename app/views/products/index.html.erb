@@ -1,0 +1,28 @@
+<h1> Products </h1>
+
+<form method="get" action="/products">
+  <input type="text" name="query">
+  Tags <input type="text" name="tags">
+  <button type="submit"> Submit </button>
+</form>
+
+<br/>
+
+<table border="1">
+  <th>title</th>
+  <th>description</th>
+  <th>tags</th>
+  <th>country</th>
+  <th>price</th>
+
+<% @products.each do |product| %>
+  <tr>
+    <td> <%= product.title %> </td>
+    <td> <%= product.description %> </td>
+    <td> <%= product.tags %> </td>
+    <td> <%= product.country %> </td>
+    <td> <%= product.price %> </td>
+  </tr>
+<% end %>
+
+</table>
